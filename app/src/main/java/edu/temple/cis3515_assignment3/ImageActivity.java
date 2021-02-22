@@ -38,6 +38,7 @@ public class ImageActivity extends AppCompatActivity
 
         //Make an ArrayList of Cat Objects
         catArray = new ArrayList<Cat>();
+        catArray.add(new Cat("Please Select a Cat:", ""));
         catArray.add(new Cat("Kitten", "I'd give it a Kit-10/10"));
         catArray.add(new Cat("Old Cat", "Aged like a fine feline."));
         catArray.add(new Cat("Fancy Cat", "He landed on his feet."));
@@ -45,8 +46,14 @@ public class ImageActivity extends AppCompatActivity
         catArray.add(new Cat("COVID Cat", "Sick as a Dog."));
 
         //Instantiate array of images to go with
-        catImgArray = new int[]{R.drawable.kitten, R.drawable.oldcat, R.drawable.fancycat,
-                                      R.drawable.buffcat, R.drawable.covidcat};
+        catImgArray = new int[]{R.drawable.blank, R.drawable.kitten, R.drawable.oldcat,
+                                R.drawable.fancycat, R.drawable.buffcat, R.drawable.covidcat};
+
+        //Set Each Cat Object's Image ID
+        for(int i = 0; i < catArray.size(); i++)
+        {
+            catArray.get(i).setImgID(catImgArray[i]);
+        }
 
         //Create one of our custom catAdapters and pass it to our Spinner
         CatAdapter catAdapter = new CatAdapter(this, catArray);
@@ -70,8 +77,9 @@ public class ImageActivity extends AppCompatActivity
 
     private void updateScreen(int position)
     {
-        imageView.setImageResource(catImgArray[position]);
-        textView.setText(catArray.get(position).getDesc());
+        Cat currCat = catArray.get(position);
+        imageView.setImageResource(currCat.getImgID());
+        textView.setText(currCat.getDesc());
     }
 
 

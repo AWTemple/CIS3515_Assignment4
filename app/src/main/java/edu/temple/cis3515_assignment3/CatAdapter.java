@@ -4,9 +4,12 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import java.util.ArrayList;
 
@@ -42,30 +45,61 @@ public class CatAdapter extends BaseAdapter implements SpinnerAdapter
     @Override
     public View getView(int position, View convertView, ViewGroup parent)
     {
-        LinearLayout linearLayout;
-
+        //Similar to the getView method, we'll create a layout, check if
+        //converView needs to be created, and then call up the necessary data
+        LinearLayout lLayout;
         TextView catView;
+        ImageView catImg;
 
-        //Just like in the sample code from class, we check if convertview is null
-        //If it is, we create a new CatView and set its attributes
         if (convertView == null)
         {
-            linearLayout = new LinearLayout(context);
-            linearLayout.setOrientation(LinearLayout.VERTICAL);
+            lLayout = new LinearLayout(context);
             catView = new TextView(context);
             catView.setTextSize(28);
-            linearLayout.addView(catView);
+            lLayout.addView(catView);
         }
-        //Otherwise we convert the... convertView
         else
         {
-            linearLayout = (LinearLayout) convertView;
-            catView = (TextView) linearLayout.getChildAt(0);
+            lLayout = (LinearLayout)convertView;
+            catView = (TextView)lLayout.getChildAt(1);
         }
 
         catView.setText(cats.get(position).getName());
 
-        return linearLayout;
+        return lLayout;
+    }
+
+    @Override
+    public View getDropDownView(int position, View convertView, ViewGroup parent)
+    {
+        //Similar to the getView method, we'll create a layout, check if
+        //converView needs to be created, and then call up the necessary data
+        ConstraintLayout cLayout;
+        TextView catView;
+        ImageView catImg;
+
+        if (convertView == null)
+        {
+            cLayout = new ConstraintLayout(context);
+            catImg = new ImageView(context);
+            catView = new TextView(context);
+            catView.setTextSize(28);
+            cLayout.addView(catImg);
+            cLayout.addView(catView);
+        }
+        else
+        {
+            cLayout = (ConstraintLayout)convertView;
+            catImg = (ImageView)cLayout.getChildAt(0);
+            catView = (TextView)cLayout.getChildAt(1);
+        }
+
+        catImg.setAdjustViewBounds(true);
+        catImg.setMaxWidth(150);
+        catImg.setImageResource(cats.get(position).getImgID());
+        catView.setText(cats.get(position).getName());
+
+        return cLayout;
     }
 
 }
