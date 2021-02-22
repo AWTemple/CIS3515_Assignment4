@@ -70,7 +70,7 @@ public class ImageActivity extends AppCompatActivity
                 @Override
                 public void onNothingSelected(AdapterView<?> parent)
                 {
-                    updateScreen(-1);
+                    updateScreen(0);
                 }
             });
     }

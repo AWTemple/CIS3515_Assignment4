@@ -1,6 +1,7 @@
 package edu.temple.cis3515_assignment3;
 
 import android.content.Context;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -8,8 +9,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
-
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import java.util.ArrayList;
 
@@ -65,7 +64,7 @@ public class CatAdapter extends BaseAdapter implements SpinnerAdapter
         }
 
         catView.setText(cats.get(position).getName());
-
+        lLayout.setGravity(Gravity.CENTER_HORIZONTAL);
         return lLayout;
     }
 
@@ -74,13 +73,13 @@ public class CatAdapter extends BaseAdapter implements SpinnerAdapter
     {
         //Similar to the getView method, we'll create a layout, check if
         //converView needs to be created, and then call up the necessary data
-        ConstraintLayout cLayout;
+        LinearLayout cLayout;
         TextView catView;
         ImageView catImg;
 
         if (convertView == null)
         {
-            cLayout = new ConstraintLayout(context);
+            cLayout = new LinearLayout(context);
             catImg = new ImageView(context);
             catView = new TextView(context);
             catView.setTextSize(28);
@@ -89,15 +88,25 @@ public class CatAdapter extends BaseAdapter implements SpinnerAdapter
         }
         else
         {
-            cLayout = (ConstraintLayout)convertView;
+            cLayout = (LinearLayout)convertView;
             catImg = (ImageView)cLayout.getChildAt(0);
             catView = (TextView)cLayout.getChildAt(1);
         }
 
         catImg.setAdjustViewBounds(true);
-        catImg.setMaxWidth(150);
+        catImg.setMaxHeight(300);
+
+        //Set weight for space distribution
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0,300);
+        lp.weight = 1;
+        catView.setLayoutParams(lp);
+        lp.weight = 1;
+        catImg.setLayoutParams(lp);
+
         catImg.setImageResource(cats.get(position).getImgID());
         catView.setText(cats.get(position).getName());
+        catView.setGravity(Gravity.CENTER_VERTICAL);
+        catView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
 
         return cLayout;
     }
