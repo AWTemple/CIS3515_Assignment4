@@ -1,18 +1,14 @@
-package edu.temple.cis3515_assignment3;
+package edu.temple.cis3515_assignment4;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Pair;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -24,6 +20,9 @@ public class SelectionActivity extends AppCompatActivity
     TextView textView;
     int[] catImgArray;
     ArrayList<Cat> catArray;
+    public static final String NAME = "edu.temple.cis3515_assignment4.NAME";
+    public static final String DESC = "edu.temple.cis3515_assignment4.DESC";
+    public static final String IMG = "edu.temple.cis3515_assignment4.IMG";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -64,7 +63,7 @@ public class SelectionActivity extends AppCompatActivity
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
                 {
-                    updateScreen(position);
+                    newActivity(position);
                 }
 
                 @Override
@@ -82,6 +81,22 @@ public class SelectionActivity extends AppCompatActivity
         textView.setText(currCat.getDesc());
     }
 
+    //Added this for Assignment four:
+    //We'll need to launch the new activity when an item is selected
 
+    private void newActivity(int position)
+    {
+        if(position == 0)
+            return; //Deal with Automatically running the blank image
+
+        Cat currCat = catArray.get(position);
+        Intent intent = new Intent(this, DisplayActivity.class);
+        intent.putExtra(NAME, currCat.getName());
+        intent.putExtra(DESC, currCat.getDesc());
+        intent.putExtra(IMG, currCat.getImgID());
+        System.out.println(currCat.getName());
+        startActivity(intent);
+
+    }
 
 }
