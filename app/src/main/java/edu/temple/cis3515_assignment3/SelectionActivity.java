@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class ImageActivity extends AppCompatActivity
+public class SelectionActivity extends AppCompatActivity
 {
     //Classwide Declarations
     Spinner spinner;
