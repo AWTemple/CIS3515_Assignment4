@@ -15,6 +15,7 @@ public class DisplayActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.new_activity);
+        this.setTitle("Display Activity");
 
         // Get the Intent that started this activity and extract the strings
         Intent intent = getIntent();

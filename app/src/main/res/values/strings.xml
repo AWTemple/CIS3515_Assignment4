@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">CIS3515_Assignment3</string>
+    <string name="app_name">Selection Activity</string>
+    <string name="display_name">Displaying Selected Cat:</string>
+    <string name="launcher_name">Cat Image Viewer App</string>
 </resources>

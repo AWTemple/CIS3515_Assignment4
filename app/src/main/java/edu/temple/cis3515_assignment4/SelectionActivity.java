@@ -29,6 +29,7 @@ public class SelectionActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        this.setTitle("Selection Activity");
 
         //Get our Views by ID
         spinner = findViewById(R.id.spinner);
