@@ -34,7 +34,7 @@ public class SelectionActivity extends AppCompatActivity
         //Get our Views by ID
         spinner = findViewById(R.id.spinner);
         imageView = findViewById(R.id.imageView);
-        textView = findViewById(R.id.textView);
+        textView = findViewById(R.id.prompt);
 
         //Make an ArrayList of Cat Objects
         catArray = new ArrayList<Cat>();

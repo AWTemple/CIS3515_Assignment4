@@ -6,36 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".SelectionActivity">
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="373dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="48dp"
+    <TextView
+        android:id="@+id/prompt"
+        android:layout_width="217dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/prompt"
         android:textAlignment="center"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="217dp"
-        android:layout_height="71dp"
-        android:textAlignment="center"
-        android:textSize="24sp"
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="386dp"
+        android:layout_height="294dp"
+        android:layout_marginTop="68dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.495" />
+        app:layout_constraintTop_toBottomOf="@+id/prompt"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="360dp"
-        android:layout_height="308dp"
-        android:layout_marginTop="172dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner"
-        tools:src="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>
