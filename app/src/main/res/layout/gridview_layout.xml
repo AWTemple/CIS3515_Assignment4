@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This code was heavily adapted from an online guide on gridviews.
+     Just want to be transparent about that fact. It was adapted from
+     https://abhiandroid.com/ui/gridview. I have edited it significantly
+     however. -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="1dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/catimg"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/blank" />
+
+    <TextView
+        android:id="@+id/cattext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Demo"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp" />
+
+</RelativeLayout>
