@@ -23,6 +23,7 @@
         android:layout_width="386dp"
         android:layout_height="294dp"
         android:layout_marginTop="68dp"
+        android:numColumns="3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.428"
