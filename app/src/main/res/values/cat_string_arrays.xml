@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cat_names">
+        <item>Kitten</item>
+        <item>Old Cat</item>
+        <item>Super Cat</item>
+        <item>Fancy Cat</item>
+        <item>Buff Cat</item>
+        <item>COVID Cat</item>
+    </string-array>
+    <string-array name="cat_descriptions">
+        <item>I would give it a kit-10/10.</item>
+        <item>Aged like a fine feline.</item>
+        <item>Birds beware.</item>
+        <item>He landed on his feet.</item>
+        <item>Meowscular.</item>
+        <item>Sick as a dog.</item>
+    </string-array>
+</resources>

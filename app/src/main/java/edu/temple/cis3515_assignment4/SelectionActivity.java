@@ -3,6 +3,7 @@ package edu.temple.cis3515_assignment4;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -36,14 +37,13 @@ public class SelectionActivity extends AppCompatActivity
         gridview = findViewById(R.id.gridView);
         textView = findViewById(R.id.prompt);
 
-        //Make an ArrayList of Cat Objects
+        //Make an ArrayList of Cat Objects from the cat_string_arrays file
+        Resources res = getResources();
+        String[] catNames = res.getStringArray(R.array.cat_names);
+        String[] catDescs = res.getStringArray(R.array.cat_descriptions);
         catArray = new ArrayList<Cat>();
-        catArray.add(new Cat("@string/kitten", "@string/kitten_desc"));
-        catArray.add(new Cat("@string/old_cat", "@string/old_cat_desc"));
-        catArray.add(new Cat("@string/super_cat", "@string/super_cat_desc"));
-        catArray.add(new Cat("@string/fancy_cat", "@string/fancy_cat_desc"));
-        catArray.add(new Cat("@string/buff_cat", "@string/buff_cat_desc"));
-        catArray.add(new Cat("@string/covid_cat", "@string/covid_cat_desc"));
+        for(int i = 0; i < catNames.length; i++)
+            catArray.add(new Cat(catNames[i], catDescs[i]));
 
 
         //Instantiate array of images to go with
