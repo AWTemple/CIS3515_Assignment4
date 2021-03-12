@@ -3,4 +3,16 @@
     <string name="display_name">Displaying Selected Cat:</string>
     <string name="launcher_name">Cat Image Viewer App</string>
     <string name="prompt">Please Select a Cat:</string>
+    <string name="kitten">Kitten</string>
+    <string name="old_cat">Old Cat</string>
+    <string name="super_cat">Super Cat</string>
+    <string name="fancy_cat">Fancy Cat</string>
+    <string name="buff_cat">Buff Cat</string>
+    <string name="covid_cat">COVID Cat</string>
+    <string name="kitten_desc">I would give it a kit-10/10.</string>
+    <string name="old_cat_desc">Aged like a fine feline.</string>
+    <string name="super_cat_desc">Birds beware.</string>
+    <string name="fancy_cat_desc">He landed on his feet.</string>
+    <string name="buff_cat_desc">Meowscular.</string>
+    <string name="covid_cat_desc">Sick as a dog.</string>
 </resources>

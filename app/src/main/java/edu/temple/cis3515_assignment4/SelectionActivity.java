@@ -30,7 +30,7 @@ public class SelectionActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        this.setTitle("Selection Activity");
+        this.setTitle("@string/app_name");
 
         //Get our Views by ID
         gridview = findViewById(R.id.gridView);
