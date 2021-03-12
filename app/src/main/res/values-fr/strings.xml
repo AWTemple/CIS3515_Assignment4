@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Activité de sélection</string>
+    <string name="second_screen_name">Activité d\'affichage</string>
+    <string name="display_name">Affichage du chat sélectionné</string>
+    <string name="launcher_name">Application de visionneuse d\'images de chat</string>
+    <string name="prompt">Veuillez sélectionner un chat</string>
+    <string name="intent_cat_name">edu.temple.cis3515_assignment4.NAME</string>
+    <string name="intent_cat_desc">edu.temple.cis3515_assignment4.DESC</string>
+    <string name="intent_cat_img">edu.temple.cis3515_assignment4.IMG</string>
+</resources>

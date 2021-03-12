@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cat_names">
+        <item>Chaton</item>
+        <item>Vieux Chat</item>
+        <item>Chat Puissant</item>
+        <item>Chat Fantaisie</item>
+        <item>Chat Musclé</item>
+        <item>Chat de COVID</item>
+    </string-array>
+    <string-array name="cat_descriptions">
+        <item>Chaton mignon.</item>
+        <item>Beau félin.</item>
+        <item>Un danger pour les oiseaux.</item>
+        <item>Riche comme un anglais.</item>
+        <item>Aurait pu repousser les Allemands.</item>
+        <item>Malade comme un chien.</item>
+    </string-array>
+</resources>

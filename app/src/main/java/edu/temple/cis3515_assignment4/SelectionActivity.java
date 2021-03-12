@@ -20,6 +20,7 @@ public class SelectionActivity extends AppCompatActivity
     GridView gridview;
     ImageView imageView;
     TextView textView;
+    public static Resources res;
     int[] catImgArray;
     ArrayList<Cat> catArray;
     public static final String NAME = "@string/intent_cat_name";
@@ -31,14 +32,14 @@ public class SelectionActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        this.setTitle("@string/app_name");
+        res = getResources();
+        this.setTitle(res.getString(R.string.app_name));
 
         //Get our Views by ID
         gridview = findViewById(R.id.gridView);
         textView = findViewById(R.id.prompt);
 
         //Make an ArrayList of Cat Objects from the cat_string_arrays file
-        Resources res = getResources();
         String[] catNames = res.getStringArray(R.array.cat_names);
         String[] catDescs = res.getStringArray(R.array.cat_descriptions);
         catArray = new ArrayList<Cat>();

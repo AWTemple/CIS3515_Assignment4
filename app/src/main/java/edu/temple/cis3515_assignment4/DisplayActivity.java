@@ -1,6 +1,7 @@
 package edu.temple.cis3515_assignment4;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,7 +16,7 @@ public class DisplayActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.new_activity);
-        this.setTitle("@string/second_screen_name");
+        this.setTitle(SelectionActivity.res.getString(R.string.second_screen_name));
 
         // Get the Intent that started this activity and extract the strings
         Intent intent = getIntent();
