@@ -21,9 +21,9 @@ public class SelectionActivity extends AppCompatActivity
     TextView textView;
     int[] catImgArray;
     ArrayList<Cat> catArray;
-    public static final String NAME = "edu.temple.cis3515_assignment4.NAME";
-    public static final String DESC = "edu.temple.cis3515_assignment4.DESC";
-    public static final String IMG = "edu.temple.cis3515_assignment4.IMG";
+    public static final String NAME = "@string/intent_cat_name";
+    public static final String DESC = "@string/intent_cat_desc";
+    public static final String IMG = "@string/intent_cat_img";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -38,12 +38,12 @@ public class SelectionActivity extends AppCompatActivity
 
         //Make an ArrayList of Cat Objects
         catArray = new ArrayList<Cat>();
-        catArray.add(new Cat("Kitten", "I'd give it a Kit-10/10"));
-        catArray.add(new Cat("Old Cat", "Aged like a fine feline."));
-        catArray.add(new Cat("Super Cat", "Birds Beware."));
-        catArray.add(new Cat("Fancy Cat", "He landed on his feet."));
-        catArray.add(new Cat("Buff Cat", "Meowscular."));
-        catArray.add(new Cat("COVID Cat", "Sick as a Dog."));
+        catArray.add(new Cat("@string/kitten", "@string/kitten_desc"));
+        catArray.add(new Cat("@string/old_cat", "@string/old_cat_desc"));
+        catArray.add(new Cat("@string/super_cat", "@string/super_cat_desc"));
+        catArray.add(new Cat("@string/fancy_cat", "@string/fancy_cat_desc"));
+        catArray.add(new Cat("@string/buff_cat", "@string/buff_cat_desc"));
+        catArray.add(new Cat("@string/covid_cat", "@string/covid_cat_desc"));
 
 
         //Instantiate array of images to go with

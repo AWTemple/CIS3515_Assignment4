@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Selection Activity</string>
+    <string name="second_screen_name">Display Activity</string>
     <string name="display_name">Displaying Selected Cat:</string>
     <string name="launcher_name">Cat Image Viewer App</string>
     <string name="prompt">Please Select a Cat:</string>
@@ -15,4 +16,8 @@
     <string name="fancy_cat_desc">He landed on his feet.</string>
     <string name="buff_cat_desc">Meowscular.</string>
     <string name="covid_cat_desc">Sick as a dog.</string>
+    <string name="intent_cat_name">edu.temple.cis3515_assignment4.NAME</string>
+    <string name="intent_cat_desc">edu.temple.cis3515_assignment4.DESC</string>
+    <string name="intent_cat_img">edu.temple.cis3515_assignment4.IMG</string>
+
 </resources>
